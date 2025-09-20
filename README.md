@@ -2,10 +2,13 @@
 A Streamlit-based **screening assistant** that collects candidate details and generates **role-specific technical questions** using **Mistral AI** (with a safe fallback when no API key is set).  
 Designed for recruiter teams to **save time**, **standardize screening**, and **improve candidate evaluation**.
 
+### Check out the deployed app here: [TalentScout — Streamlit App](https://talentscout12.streamlit.app/)
+
 [![Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
 [![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Mistral AI](https://img.shields.io/badge/AI-Mistral%20API-8A2BE2?logo=openai&logoColor=white)](https://mistral.ai/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Deploy](https://img.shields.io/badge/Deployed%20on-Streamlit%20Cloud-FF4B4B?logo=streamlit&logoColor=white)](https://talentscout12.streamlit.app/)
 ---
 ## ✨ Features
 
