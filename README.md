@@ -75,13 +75,13 @@ streamlit run app/streamlit_app.py
 Open 👉 http://localhost:8501
 ```
 ### 2. ☁️ Deployment (Streamlit Cloud)
-Push repo to GitHub.
-Go to Streamlit Cloud.
-Create new app → point to app/streamlit_app.py.
-Add environment secrets:
+1. Push repo to GitHub.
+2. Go to Streamlit Cloud.
+3. Create new app → point to app/streamlit_app.py.
+4. Add environment secrets:
 - MISTRAL_API_KEY (required for AI-powered questions)
 - DATABASE_URL (optional for persistence; SQLite otherwise)
-Deploy 🎉
+- Deploy 🎉
 
 ### 3. 🧪 Testing
 Run unit tests with:
@@ -97,37 +97,35 @@ def test_fallback_generation():
     assert "Python" in q
     assert len(q["Python"]) >= 3
 ```
-📸 Screenshots
-Candidate Form
+## 📸 Screenshots
 
-Generated Questions
+### Candidate Form
+![Candidate Form](docs/screenshots/CandidateForm.jpg)
 
-Recent Submissions
+### Generated Questions
+![Generated Questions](docs/screenshots/GeneratedQuestions.jpg)
 
-⚙️ Tech Stack
-Streamlit — UI framework
-Mistral AI — LLM for dynamic question generation
-SQLAlchemy — ORM & DB handling
-[SQLite/Postgres] — storage (SQLite default, Postgres recommended for cloud)
-[Python 3.10+] — runtime
+### Recent Submissions
+![Recent Submissions](docs/screenshots/RecentSubmissions.jpg)
+
+## ⚙️ Tech Stack
+1. Streamlit — UI framework
+2. Mistral AI — LLM for dynamic question generation
+3. SQLAlchemy — ORM & DB handling
+4. [SQLite/Postgres] — storage (SQLite default, Postgres recommended for cloud)
+5. [Python 3.10+] — runtime
 
 ## 🔒 Security & Privacy
-Candidate data stored locally (SQLite) or in configured DB.
-Sensitive fields (email, phone) can be anonymized if required.
-API keys are never logged; use .env or Streamlit Cloud Secrets.
-.env and *.db are in .gitignore by default.
+- Candidate data stored locally (SQLite) or in configured DB.
+- Sensitive fields (email, phone) can be anonymized if required.
+- API keys are never logged; use .env or Streamlit Cloud Secrets.
+- .env and *.db are in .gitignore by default.
 
-📌 Limitations & Next Steps
-SQLite on Streamlit Cloud is ephemeral → use Postgres for persistence.
-
-Current prompt parser is JSON-based → brittle for malformed outputs.
-
-Future:
-
-Admin dashboard for recruiters
-
-Difficulty selector slider
-
-Multilingual support
-
-Export to PDF/CSV
+## 📌 Limitations & Next Steps
+- SQLite on Streamlit Cloud is ephemeral → use Postgres for persistence.
+- Current prompt parser is JSON-based → brittle for malformed outputs.
+- Future:
+1. Admin dashboard for recruiters
+2. Difficulty selector slider
+3. Multilingual support
+4. Export to PDF/CSV
